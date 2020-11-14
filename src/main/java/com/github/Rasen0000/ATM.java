@@ -1,7 +1,9 @@
 package com.github.Rasen0000;
 
+import java.math.BigDecimal;
+
 public class ATM {
-    private int money = 100;
+    private BigDecimal money = BigDecimal.valueOf(100.00);
     private String currency = "Руб.";
 
     public ATM() {

@@ -4,7 +4,9 @@ import java.math.BigDecimal;
 import java.util.*;
 import static com.github.Rasen0000.Currency.RUR;
 
+
 public interface Interaction {
+
     ArrayList <Integer>  requests = new ArrayList<>();
     Set<Integer> set = new HashSet<>(requests);
     ATM atm = new ATM(RUR, new BigDecimal(100000), new BigDecimal(500));

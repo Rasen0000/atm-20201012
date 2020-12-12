@@ -2,6 +2,8 @@ package com.github.Rasen0000;
 
 import java.math.BigDecimal;
 import java.util.*;
+import java.util.function.Predicate;
+
 import static com.github.Rasen0000.Currency.RUR;
 
 
@@ -24,6 +26,8 @@ public interface Interaction {
             System.out.println("Отказ");
         }
     }
+
+
 
 
 //    Map<Integer, Integer> hashMap = new HashMap<>();

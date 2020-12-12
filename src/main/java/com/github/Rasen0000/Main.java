@@ -1,6 +1,8 @@
 package com.github.Rasen0000;
 
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.math.BigDecimal;
 
 import static com.github.Rasen0000.Currency.*;
@@ -17,7 +19,7 @@ public class Main {
             boolean b = set.size() < requests.size();
         }
         catch (Exception e) {
-            System.out.println("Repeat operation.");
+            System.out.println("Repeat operation.");///log.info не работает. не понимаю почему
         }
     }
     private static String getMessage(){

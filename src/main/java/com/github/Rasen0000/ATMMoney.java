@@ -1,24 +1,21 @@
 package com.github.Rasen0000;
 
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+@NonNull
+@Getter
+@Setter
+public class ATMMoney  {
 
-public class ATMMoney<currency> extends ATM {
-    String currency;
-    @Getter
-    @Setter
-    private BigDecimal ATMMoney; //запас денег в банкомате
 
-    @Getter
-    @Setter
-    private BigDecimal money; //деньги требуемые клиенту
-
-    public void getMoney() {
-        ATMMoney = ATMMoney.subtract(money);
+//    public void getMoney() {
+//        ATMMoney = ATMMoney.subtract(money);
         //System.out.println("Выдача средств " + money +" "+ currency );
         //System.out.println("Остаток средств в банкомате " + ATMMoney +" "+ currency);
 
-    }
+//    }
+
 }

@@ -6,8 +6,11 @@ import lombok.extern.slf4j.Slf4j;
 import java.math.BigDecimal;
 
 import static com.github.Rasen0000.Currency.*;
+import static com.github.Rasen0000.ErrorCodes.RETRY_REQUEST;
 import static com.github.Rasen0000.Interaction.requests;
 import static com.github.Rasen0000.Interaction.set;
+
+@Slf4j
 
 public class Main {
         public static void main(String[] args) {
@@ -19,7 +22,9 @@ public class Main {
             boolean b = set.size() < requests.size();
         }
         catch (Exception e) {
-            System.out.println("Repeat operation.");///log.info не работает. не понимаю почему
+            log.info("Repeat operation.");
+            //ATM.getErrorState();
+            //todo: нужно остановить программу, если нельзя обработать исключение
         }
     }
     private static String getMessage(){

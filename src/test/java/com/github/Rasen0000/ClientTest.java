@@ -23,7 +23,7 @@ class ClientTest {
     @BeforeAll
     public static void setUpValidator() {
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-        validator = (Validator) factory.getValidator();
+        validator = factory.getValidator();
         log.info("Ошибка");
     }
     @Test

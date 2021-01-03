@@ -2,6 +2,8 @@ package com.github.Rasen0000;
 
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.math.BigDecimal;
 
@@ -36,6 +38,12 @@ public class Main {
                     break;
             }
         return "42";
+    }
+
+    public static void getClient(){
+        ApplicationContext context =
+                new AnnotationConfigApplicationContext(Main.class);
+        Client obj = context.getBean("client", Client.class);
     }
 
 }

@@ -3,6 +3,7 @@ package com.github.Rasen0000;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
@@ -14,7 +15,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
 @Slf4j
-
 class ClientTest {
 
 
@@ -26,13 +26,14 @@ class ClientTest {
         validator = factory.getValidator();
         log.info("Ошибка");
     }
+
     @Test
     void getMoney() {
         Client client = new Client("P@$", new BigDecimal(2000), new BigDecimal(15));
 
-        Set<ConstraintViolation<Client>> constraintViolations = validator.validate( client );
-        assertEquals( 1, constraintViolations.size());
-        assertEquals( "Пароль должен состоять из 6-8 символов", constraintViolations.iterator().next().getMessage());
+        Set<ConstraintViolation<Client>> constraintViolations = validator.validate(client);
+        assertEquals(1, constraintViolations.size());
+        assertEquals("Пароль должен состоять из 6-8 символов", constraintViolations.iterator().next().getMessage());
 
 
     }

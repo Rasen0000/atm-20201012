@@ -9,7 +9,7 @@ import static com.github.Rasen0000.Currency.RUR;
 
 public interface Interaction {
 
-    ArrayList <Integer>  requests = new ArrayList<>();
+    ArrayList<Integer> requests = new ArrayList<>();
     Set<Integer> set = new HashSet<>(requests);
     ATM atm = new ATM(RUR, new BigDecimal(100000), new BigDecimal(500));
 
@@ -20,7 +20,7 @@ public interface Interaction {
         if (isPasswordTrue) {
             atm.getMoney("112", new BigDecimal(10000), new BigDecimal(10));
             requests.add(1);
-            }
+        }
         //todo: пока не понимаю как реализовать отказ в выдаче средств. Должен выводить сообщение на экран. Реализовать экран и сообщения на нем
         else {
             System.out.println("Отказ");
@@ -28,10 +28,7 @@ public interface Interaction {
     }
 
 
-
-
 //    Map<Integer, Integer> hashMap = new HashMap<>();
-
 
 
 }

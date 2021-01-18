@@ -8,9 +8,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import java.math.BigDecimal;
 
 import static com.github.Rasen0000.Currency.*;
-import static com.github.Rasen0000.ErrorCodes.RETRY_REQUEST;
 import static com.github.Rasen0000.Interaction.requests;
 import static com.github.Rasen0000.Interaction.set;
+
 
 @Slf4j
 

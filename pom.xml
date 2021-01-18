@@ -6,7 +6,12 @@
 
     <groupId>org.example</groupId>
     <artifactId>atm-20201012</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>common</module>
+    </modules>
+
     <properties>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -20,7 +25,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
+            <version>5.6.0-M1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -69,6 +74,18 @@
             <artifactId>spring-beans</artifactId>
             <version>4.2.6.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>atm-20201012</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
     </dependencies>
 
     <build>

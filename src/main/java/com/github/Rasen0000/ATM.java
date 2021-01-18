@@ -16,8 +16,10 @@ public class ATM {
     private ErrorCodes errorState;
     Predicate<BigDecimal> n = t -> t.compareTo(BigDecimal.ZERO) > 0;
 
-    public ATM(Currency rur, BigDecimal bigDecimal, BigDecimal bigDecimal1) {
+    public ATM(Currency RUR, BigDecimal bigDecimal, BigDecimal bigDecimal1) {
     }
+
+
 
     public static ErrorCodes getErrorState() {
 

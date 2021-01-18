@@ -2,7 +2,8 @@ package com.github.Rasen0000;
 
 import java.math.BigDecimal;
 import java.util.*;
-import java.util.function.Predicate;
+
+
 
 import static com.github.Rasen0000.Currency.RUR;
 

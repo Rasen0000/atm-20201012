@@ -1,7 +1,8 @@
-package com.github.Rasen0000;
+package Rasen0000.com.github.com.github;
 
-import lombok.Getter;
-import lombok.Setter;
+import com.github.Rasen0000.Currency;
+import com.github.Rasen0000.ErrorCodes;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.util.function.Predicate;
@@ -16,13 +17,11 @@ public class ATM {
     private ErrorCodes errorState;
     Predicate<BigDecimal> n = t -> t.compareTo(BigDecimal.ZERO) > 0;
 
-    public ATM(Currency RUR, BigDecimal bigDecimal, BigDecimal bigDecimal1) {
+    public ATM(Currency rur, BigDecimal bigDecimal, BigDecimal bigDecimal1) {
     }
 
 
-
     public static ErrorCodes getErrorState() {
-
         return ErrorCodes.valueOf("---");
     }
 
@@ -36,7 +35,5 @@ public class ATM {
         return BigDecimal.valueOf(1);
     }
 
-
-///не совсем понятно зачем банкомату хранить в поле необходимую клиенту сумму. надо будет обсудить дизайн на уроке. я бы не делал это ввиде поля. банкомат может хранить общую сумму, а в метод получения денег принимать сумму нужную клиенту.
 
 }

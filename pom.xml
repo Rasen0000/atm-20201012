@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>common</module>
+        <module>main</module>
     </modules>
 
     <properties>
@@ -74,7 +75,9 @@
             <artifactId>spring-beans</artifactId>
             <version>4.2.6.RELEASE</version>
         </dependency>
-        <dependency>
+
+        <!--
+       <dependency>
             <groupId>org.example</groupId>
             <artifactId>atm-20201012</artifactId>
             <version>1.0-SNAPSHOT</version>
@@ -85,6 +88,7 @@
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
+        -->
 
     </dependencies>
 

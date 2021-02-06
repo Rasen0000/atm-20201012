@@ -1,4 +1,4 @@
-package Rasen0000.com.github.com.github;
+package Rasen0000.com.github;
 
 
 import lombok.extern.slf4j.Slf4j;
@@ -8,8 +8,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import java.math.BigDecimal;
 
 import static com.github.Rasen0000.Currency.*;
-import static Rasen0000.com.github.com.github.Interaction.requests;
-import static Rasen0000.com.github.com.github.Interaction.set;
+import static Rasen0000.com.github.Interaction.requests;
+import static Rasen0000.com.github.Interaction.set;
 
 
 @Slf4j

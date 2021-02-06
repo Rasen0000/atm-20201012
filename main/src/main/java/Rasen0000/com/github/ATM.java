@@ -1,4 +1,4 @@
-package Rasen0000.com.github.com.github;
+package Rasen0000.com.github;
 
 import com.github.Rasen0000.Currency;
 import com.github.Rasen0000.ErrorCodes;

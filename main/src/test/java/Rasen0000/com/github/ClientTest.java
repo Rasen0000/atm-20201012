@@ -1,4 +1,4 @@
-package com.github.Rasen0000;
+package Rasen0000.com.github;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeAll;
@@ -17,6 +17,8 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 @Slf4j
 class ClientTest {
 
+
+//todo: ругается на log4j
 
     private static Validator validator;
 
@@ -39,10 +41,11 @@ class ClientTest {
     }
 
 
-   /*@Test
+  /* @Test
     void getCash() {
         Client client = new Client("P@$", new BigDecimal(20), new BigDecimal(220));
         assertNull(client.getCash());
     }*/
+    //todo: заменить тест другим
 }
 

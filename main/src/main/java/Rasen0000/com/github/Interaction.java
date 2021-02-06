@@ -1,4 +1,4 @@
-package com.github.Rasen0000;
+package Rasen0000.com.github;
 
 import java.math.BigDecimal;
 import java.util.*;

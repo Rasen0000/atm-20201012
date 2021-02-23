@@ -6,10 +6,11 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Set;
 
+import static Rasen0000.com.github.Interaction.*;
 import static com.github.Rasen0000.Currency.*;
-import static Rasen0000.com.github.Interaction.requests;
-import static Rasen0000.com.github.Interaction.set;
 
 
 @Slf4j
@@ -18,15 +19,16 @@ public class Main {
     public static void main(String[] args) {
         Client client = new Client("P@$$word", new BigDecimal(2000), new BigDecimal(15));
         ATM atm = new ATM(RUR, new BigDecimal(100000), new BigDecimal(500));
+
         Interaction.enterPassword(true); //ввод пароля и результат
         getMessage();
         try {
-            boolean b = set.size() < requests.size();
+            Interaction.repeatOperation(); //попытка проверки на повторную операцию
+
         } catch (IllegalArgumentException e) {
             log.info("Repeat operation.");
             ATM.getErrorState();
             System.exit(1);
-            //todo: ввести свое исключение
         }
     }
 

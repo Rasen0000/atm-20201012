@@ -34,7 +34,7 @@ public class Client<SavingAccount, DefaultAccount> {
     public SavingAccount getMoney(Interaction atm) {
         cash = cash.add(money);
         return (SavingAccount) atm.getMoney(password, bankAccount, cash);
-// TODO: 28.11.2020 к имеющимся наличным нужно прибавить, то что выдается из банкомата
+
     }
 
 

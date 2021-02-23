@@ -18,7 +18,6 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 class ClientTest {
 
 
-//todo: ругается на log4j
 
     private static Validator validator;
 
@@ -41,11 +40,5 @@ class ClientTest {
     }
 
 
-  /* @Test
-    void getCash() {
-        Client client = new Client("P@$", new BigDecimal(20), new BigDecimal(220));
-        assertNull(client.getCash());
-    }*/
-    //todo: заменить тест другим
 }
 

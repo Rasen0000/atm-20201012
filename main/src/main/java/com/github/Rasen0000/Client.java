@@ -1,4 +1,4 @@
-package Rasen0000.com.github;
+package com.github.Rasen0000;
 
 import lombok.Getter;
 import lombok.Setter;

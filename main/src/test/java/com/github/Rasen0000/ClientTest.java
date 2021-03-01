@@ -1,4 +1,4 @@
-package Rasen0000.com.github;
+package com.github.Rasen0000;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeAll;

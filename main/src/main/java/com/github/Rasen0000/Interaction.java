@@ -1,11 +1,11 @@
-package Rasen0000.com.github;
+package com.github.Rasen0000;
 
 import java.math.BigDecimal;
 import java.util.*;
 
 
 
-import static com.github.Rasen0000.Currency.RUR;
+import static com.github.Rasen0000.Currency.*;
 
 
 public interface Interaction {
@@ -20,7 +20,7 @@ public interface Interaction {
 
     static void enterPassword(boolean isPasswordTrue) {
         if (isPasswordTrue) {
-            atm.getMoney("112", new BigDecimal(10000), new BigDecimal(10));
+            atm.getMoney();
 
             list.add("enterPassword");
         }

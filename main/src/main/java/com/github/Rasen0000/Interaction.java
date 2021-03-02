@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 import java.util.*;
 
 
-
 import static com.github.Rasen0000.Currency.*;
+
 
 
 public interface Interaction {
@@ -21,7 +21,6 @@ public interface Interaction {
     static void enterPassword(boolean isPasswordTrue) {
         if (isPasswordTrue) {
             atm.getMoney();
-
             list.add("enterPassword");
         }
 
@@ -29,6 +28,7 @@ public interface Interaction {
             System.out.println("Отказ");
         }
     }
+
 
     static void repeatOperation(){
         for (int i = 0; i < list.size(); i++) {

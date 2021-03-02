@@ -12,14 +12,17 @@ import static com.github.Rasen0000.ErrorCodes.*;
 @Getter
 @Setter
 public class ATM {
-    private BigDecimal ATMMoney = new BigDecimal(2000); //запас денег в банкомате
+    private BigDecimal ATMMoney; //запас денег в банкомате
     private ErrorCodes errorState;
-    private BigDecimal cash = new BigDecimal(2);
+    private Currency currency;
+    private BigDecimal cash;
     Predicate<BigDecimal> n = t -> t.compareTo(BigDecimal.ZERO) > 0;
 
-    public ATM(Currency rur, BigDecimal bigDecimal, BigDecimal bigDecimal1) {
+    public ATM(Currency currency, BigDecimal ATMMoney,  BigDecimal cash) {
+        this.ATMMoney = ATMMoney;
+        this.currency = currency;
+        this.cash = cash;
     }
-
 
     public static ErrorCodes getErrorState() {
         return NON;

@@ -12,12 +12,10 @@ import java.math.BigDecimal;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+
 
 @Slf4j
 class ClientTest {
-
-
 
     private static Validator validator;
 

@@ -20,7 +20,7 @@ public class Main {
         Interaction.enterPassword(true); //ввод пароля и результат
         getMessage();
         try {
-            Interaction.repeatOperation(); //попытка проверки на повторную операцию
+            Interaction.repeatOperation(); //проверка на повторную операцию
 
         } catch (IllegalArgumentException e) {
             log.info("Repeat operation.");

@@ -4,6 +4,7 @@ package com.github.Rasen0000;
 import lombok.*;
 
 import java.math.BigDecimal;
+import java.util.Scanner;
 import java.util.function.Predicate;
 
 import static com.github.Rasen0000.ErrorCodes.*;
@@ -29,12 +30,23 @@ public class ATM {
     }
 
 
+
     public BigDecimal getMoney() {
-        ATMMoney = ATMMoney.subtract(getCash());
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите сумму для снятия : ");
+        cash = new BigDecimal(in.next());
+
+        BigDecimal ATMMoney = BigDecimal.valueOf(2325.06);
+        ATMMoney = ATMMoney.subtract(cash);
         if (n.test(ATMMoney)) {
+            System.out.println("Остаток на счете: " + ATMMoney);
+            errorState = NON;
+        }
+        else {
+            System.out.println("Некорректный запрос. Повторить");
+            getMoney();
             errorState = INSUFFICIENT_FUNDS_ATM;
         }
-        errorState = NON;
         return ATMMoney;
     }
 

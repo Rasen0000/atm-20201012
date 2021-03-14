@@ -17,8 +17,9 @@ public class Main {
         Client client = new Client("P@$$word", new BigDecimal(2000), new BigDecimal(15));
         ATM atm = new ATM(RUR, new BigDecimal(100000), new BigDecimal(500));
 
-        Interaction.enterPassword(true); //ввод пароля и результат
+        Interaction.enterPassword1(); //ввод пароля и результат
         getMessage();
+        System.out.print(getMessage());
         try {
             Interaction.repeatOperation(); //проверка на повторную операцию
 
@@ -37,10 +38,14 @@ public class Main {
                 return "Недостаточно средств на счете";
             case INSUFFICIENT_FUNDS_ATM:
                 return "Недостаточно средств в банкомате";
+            case INCORRECT_INPUT:
+                return "Некорректный ввод";
+            case WRONG_PASSWORD:
+                return "Неправильный пароль";
             case NON:
                 break;
         }
-        return "42";
+        return String.valueOf(ATM.getErrorState());
     }
 
     public static void getClient() {

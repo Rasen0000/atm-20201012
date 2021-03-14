@@ -4,8 +4,10 @@ import java.math.BigDecimal;
 import java.util.*;
 
 
+import static com.github.Rasen0000.ATM.getErrorState;
 import static com.github.Rasen0000.Currency.*;
-
+import static com.github.Rasen0000.ErrorCodes.INSUFFICIENT_FUNDS_ATM;
+import static com.github.Rasen0000.ErrorCodes.WRONG_PASSWORD;
 
 
 public interface Interaction {
@@ -18,7 +20,26 @@ public interface Interaction {
 
     String getMoney(String password, BigDecimal bankAccount, BigDecimal cash);
 
-    static void enterPassword(boolean isPasswordTrue) {
+
+    static void enterPassword1() {
+        String password = "Password";
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите пароль: ");
+        String str = in.nextLine();
+        //in.close();
+        if (str.equals(password)) {
+            System.out.println("Правильный пароль");
+            atm.getMoney();
+            list.add("enterPassword");
+        }
+
+        else {
+
+            System.out.println("Отказ");
+        }
+    }
+
+   /* static void enterPassword(boolean isPasswordTrue) {
         if (isPasswordTrue) {
             atm.getMoney();
             list.add("enterPassword");
@@ -27,7 +48,7 @@ public interface Interaction {
         else {
             System.out.println("Отказ");
         }
-    }
+    }*/
 
 
     static void repeatOperation(){
